@@ -7,13 +7,115 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="/build/css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
-    <script src="/build/js/jquery-3.4.1.min.js"></script>
+    <script src="/build/js/jquery-3.4.1.min.js"></script> 
     <title>SlickApp</title>
 </head>
 
 <body>
+    <header>
+        <nav class="menu">
+            <ul class="menu__items">
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#overview">Overview</a>
+                </li>
+                <li>
+                    <a href="#features">Features</a>
+                </li>
+                <li>
+                    <a href="#download">Download</a>
+                </li>
+            </ul>
+            <a href="#" id="toggle-btn">SLICK</a>
+        </nav>
+    </header>
 
+
+    <a name="home"></a>
+    <div class="hero">
+        <div class="container">
+            <h1>Slick App</h1>
+            <h2><i class="fa fa-camera" aria-hidden="true"></i>Start your amazing stuff through Slick.</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima illo et libero! Facere eligendi
+                doloremque commodi facilis eos officiis odit repellendus quia assumenda ea placeat accusantium ipsa
+                laborum rem non nostrum, at ratione, cumque! Magni iusto cupiditate adipisci perspiciatis. Rem.</p>
+        </div>
+    </div>
+
+
+    <a name="overview"></a>
+    <div id="overview" class="overview">
+        <div class="container">
+            <div class="overview__content">
+
+                <div>
+                    <h2>Overview</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut fugit, repellendus nobis
+                        temporibus, nihil saepe facilis ullam iure blanditiis facere?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, aliquid, provident. Illo
+                        unde amet culpa, deserunt veniam possimus praesentium officiis.</p>
+                    <button type="button">View More</button>
+                </div>
+
+                <div>
+                    <img src="img/overview.jpg" alt="">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="about" class="about">
+        <div class="container">
+            <h2>
+                <i class="fa fa-camera"></i>slick
+            </h2>
+            <h3>Capture the moments.</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit ab fuga aliquid possimus, consectetur ipsa
+                tempora voluptates. Nisi consectetur, aut.</p>
+            <img src="img/about.jpg" alt="">
+        </div>
+    </div>
+
+    <a name="features"></a>
+    <div id="features" class="features">
+        <div class="container">
+            <div class="features__content">
+                <div>
+                    <img src="img/features.jpg" alt="">
+                </div>
+                <div>
+                    <h2>Features</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, voluptate.</p>
+                    <h4>&#10148; Easy Notification</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, asperiores?</p>
+                    <h4>&#10148; Fully Responsive</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, asperiores?</p>
+                    <h4>&#10148; Editable Layout</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, asperiores?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="download"></a>
+    <div id="subscribe" class="download">
+        <div class="container">
+            <h2>Subscribe to our newsletter</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ea, ab asperiores mollitia laudantium
+                consequuntur dignissimos obcaecati id veniam ratione?</p>
+            <input type="text" placeholder="Enter your email">
+            <br>
+            <button type="button">Notify Me</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <span>Slick App</span>
+    </footer>
 
     <script src="/build/js/script.js"></script>
 </body>

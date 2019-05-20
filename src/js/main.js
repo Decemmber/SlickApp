@@ -1,53 +1,53 @@
-$(document).ready(function() {
-    $('.multiple-items').slick({
-        lazyLoad: 'ondemand',
-        infinite: true,
-        slidesToShow: 4,
-        slidesToScroll: 2,
-        arrows: false,
-        dots: true,
-        dotsClass: 'dots-style',
-        responsive: [
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 2,
-              }
-            },
-            {
-              breakpoint: 767,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-              }
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-              }
-            },
-            {
-                breakpoint: 479,
-                settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1
-                }       
-            }]
-      });
+/*mobile menu*/
+$(function() {
+  menu = $('.menu__items');
 
-/*Scroll button*/
-$(window).scroll(function () {
-    if ($(this).scrollTop() != 0)
-       $('#toTop').fadeIn();
-    else
-       $('#toTop').fadeOut();
- });
- $('#toTop').click(function () {
-    $('body,html').animate({
-       scrollTop: 0
-    }, 800);
- });
-})
+  $('#toggle-btn').on('click', function(e) {
+        e.preventDefault();
+        menu.slideToggle();
+  });
+
+  $(window).resize(function() {
+        var w = $(this).width();
+        if(w > 580 && menu.is(':hidden')) {
+              menu.removeAttr('style');
+        }
+  });
+
+  $('.menu__items li').on('click', function(e) {
+        var w = $(window).width();
+        if(w < 580) {
+              menu.slideToggle();
+        }
+  });
+});
+
+// smooth scrolling
+$('a[href*="#"]')
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { 
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); 
+            $target.focus(); 
+          };
+        });
+      }
+    }
+  });
